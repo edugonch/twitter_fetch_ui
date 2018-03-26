@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterUi</title>
+    <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <script>
+      App.init();
+    </script>
+    <%= javascript_pack_tag "tags_menu" %>
+    <%= content_for?(:javascript_include_tags) ? yield(:javascript_include_tags) : '' %>
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="page-main">
+        <% if content_for?(:main_header) %>
+          <%= yield :main_header %>
+        <% else %> 
+          <%= render partial: "shared/main_nav" %>
+          <%= render partial: "shared/tags_nav" %>
+        <% end %>
+        <div class="page-content">
+          <% if flash[:danger] %>
+            <div class="alert alert-danger" role="alert">
+              <%= flash[:danger].html_safe %>
+            </div>
+          <% end %>
+          <div class="container">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

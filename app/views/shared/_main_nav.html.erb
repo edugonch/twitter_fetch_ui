@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="container">
+    <div class="navbar p-0">
+      <span class="navbar-brand">
+        <img src="<%= asset_url("twitter_list.png") %>" class="navbar-brand-img" alt="Twitter List">
+      </span>
+      <div class="nav order-lg-2">
+        <div class="nav-item">
+          <a href="https://github.com/tabler/tabler" class="btn btn-sm btn-outline-primary" target="_blank">Source code</a>
+        </div>
+        <div class="dropdown ml-3">
+          <a href="#" class="nav-link" data-toggle="dropdown">
+            <span class="ml-2 d-none d-lg-block">
+              <span class="text-default"><%= session[:email]%></span>
+            </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <%= form_tag "/sessions/0", method: "delete" do %>
+              <input type="hidden" name="login[id]" value="0"/>
+              <button type="submit" class="dropdown-item" value="Sign out">Sign out</button>
+            <%end%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+{
+  "name": "twitter_ui",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^3.4.1",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-merge": "^4.1.2",
+    "webpacker-react": "^0.3.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
+}

@@ -1,0 +1,7 @@
+<% content_for :javascript_include_tags do %>
+  <%= javascript_pack_tag "twitts_list" %>
+<% end %>
+
+<%= react_component("TwittsList",
+    twittsPath: "/twitts/"
+) %>
