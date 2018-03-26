@@ -34,7 +34,7 @@ export default class TagsMenu extends Component {
   render() {
     let self = this;
     return (
-        <div className="header-nav d-none d-lg-flex">
+        <div className="header-nav d-lg-flex">
             <div className="container">
                 <div className="row align-items-center">
                 <div className="col">
